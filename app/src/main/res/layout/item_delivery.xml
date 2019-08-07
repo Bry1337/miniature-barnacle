@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+  <data>
+    <variable
+        name="viewModel"
+        type="bry1337.github.io.deliveryman.presentation.home.DeliveryViewModel"
+        />
+  </data>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/value_50dp"
+      android:layout_marginBottom="@dimen/value_2dp"
+      android:layout_marginEnd="@dimen/value_4dp"
+      android:layout_marginStart="@dimen/value_4dp"
+      android:layout_marginTop="@dimen/value_2dp"
+      android:background="@android:color/white"
+      android:orientation="vertical"
+      >
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="@dimen/value_50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/ivImage"
+        app:mutableText="@{viewModel.getDescription()}"
+        android:padding="@dimen/value_4dp"
+        tools:text="@string/dummy_string"
+        />
+
+  </RelativeLayout>
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deliveryman_navigation"
+    app:startDestination="@+id/homeFragment">
+
+  <fragment
+      android:id="@+id/homeFragment"
+      android:name="bry1337.github.io.deliveryman.presentation.home.HomeFragment"
+      android:label="@string/things_to_deliver"
+      tools:layout="@layout/fragment_home">
+    <action
+        android:id="@+id/action_to_delivery_location"
+        app:destination="@+id/deliveryFragment" />
+  </fragment>
+
+  <fragment
+      android:id="@+id/deliveryFragment"
+      android:name="bry1337.github.io.deliveryman.presentation.location.LocationFragment"
+      android:label="@string/delivery_details"
+      tools:layout="@layout/fragment_map_location">
+    <argument
+        android:name="delivery"
+        app:argType="bry1337.github.io.deliveryman.model.Delivery" />
+  </fragment>
+
+</navigation>
